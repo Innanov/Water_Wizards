@@ -1,4 +1,3 @@
-# NYUAD Hackathon for Social Good in the Arab World: Focusing on Quantum Computing (QC) and Aritificial Intelligence (AI)
 
 # Team 4: Water Wizards - سحرة الماء
 
