@@ -4,74 +4,103 @@
   <meta charset="utf-8">
   <title>Water Wizards • Quantum Water-Quality Platform</title>
 
-  <!-- Bootstrap 5 CDN for quick, responsive styling -->
+  <!-- Frameworks & libs -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"                rel="stylesheet">
+  <link href="style.css"                                                rel="stylesheet">
 </head>
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Water Wizards</a>
-
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="live-demo.html">Live Demo</a></li>
-          <li class="nav-item"><a class="nav-link" href="dashboards.html">Dashboards</a></li>
+          <li class="nav-item"><a class="nav-link"          href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link"          href="live-demo.html">Live Demo</a></li>
+          <li class="nav-item"><a class="nav-link"          href="dashboards.html">Dashboards</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="py-5 text-center text-light bg-primary hero">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Quantum-Powered Water Security</h1>
-      <p class="lead">Detect, optimise, and safeguard water quality with unprecedented precision.</p>
-      <a class="btn btn-light btn-lg m-2" href="live-demo.html">Try the Live Demo →</a>
+  <header id="home-hero" class="vh-100 d-flex flex-column justify-content-center text-light">
+    <div class="container text-center" data-aos="fade-up">
+      <h1 class="display-4 fw-bold mb-3">Water&nbsp;Wizards</h1>
+      <h2 class="h4"><span id="typed-line"></span></h2>
+
+      <a href="live-demo.html" class="btn btn-lg btn-outline-light mt-4">Launch Live Demo</a>
+
+      <!-- ↓ arrow sits on its own line -->
+      <button class="arrow-btn bounce" onclick="scrollToShowcase()">↓</button>
     </div>
   </header>
 
-  <!-- VALUE PROPS -->
-  <section class="container py-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Quantum Sensing</h5>
-            <p class="card-text">Detect ppb-level contaminants in real time with quantum-dot fluorescence and zero-drift read-outs.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">QAOA-Optimised Placement</h5>
-            <p class="card-text">Minimise hardware cost while maximising coverage through quantum-approximate optimisation.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Aligned with SDGs 3 • 6 • 9 • 11</h5>
-            <p class="card-text">Health, clean water, resilient infrastructure and sustainable cities all benefit from Water Wizards.</p>
-          </div>
-        </div>
-      </div>
+  <!-- SHOWCASE #1 -->
+  <section id="quantum-sensing" class="showcase text-light">
+    <div class="overlay d-flex flex-column justify-content-center text-center">
+      <h3 class="display-6 fw-bold ">Quantum Sensing</h3>
+      <p class="lead mx-auto col-md-6">Detect ppb-level contaminants in <em>real time</em> with quantum-dot fluorescence and zero-drift read-outs.</p>
     </div>
   </section>
 
+  <section id="qaoa" class="showcase text-light position-relative">
+    <div id="particles-qaoa" class="position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="overlay d-flex flex-column justify-content-center text-center position-relative">
+        <div style="height: 250px;"></div> <!-- Spacer -->
+      <h3 class="display-6 fw-bold">QAOA-Optimised Placement</h3>
+      <p class="lead mx-auto col-md-6">Maximise coverage • Minimise cost • Quantum-approximate optimisation on graph data.</p>
+    </div>
+  </section>
+
+  <!-- SHOWCASE #3 (SDGs) -->
+  <section id="sdgs" class="showcase">
+    <div class="overlay d-flex flex-column align-items-center text-center">
+      <!-- <h3 class="display-6 fw-bold mb-4 text-light">Driving 4 UN SDGs</h3> -->
+      <h3 class="display-6 fw-bold mb-4 text-dark">Driving 4 UN SDGs</h3>
+
+  </section>
+
+  <!-- ABOUT CTA -->
+  <section class="py-5 bg-dark  text-light text-center">
+    <h4 class="mb-3">Ready to learn more?</h4>
+    <a href="about.html" class="btn btn-outline-light btn-lg">About Us →</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-dark text-light text-center py-3">
     © 2025 Water Wizards • Quantum for Good
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <script>
+    AOS.init({once:true});
+    new Typed("#typed-line",{strings:[
+      "Quantum sensors for real-time water safety",
+      "Optimised placement with QAOA"
+    ],typeSpeed:45,backSpeed:20,backDelay:1800,loop:true});
+
+    /* arrow scroll */
+    function scrollToShowcase(){document.getElementById("quantum-sensing").scrollIntoView({behavior:"smooth"});}
+
+    /* particles on QAOA panel */
+    particlesJS("particles-qaoa",{
+      particles:{number:{value:60,density:{enable:true,value_area:800}},
+                 color:{value:"#00d1ff"},
+                 size:{value:3},
+                 line_linked:{enable:true,color:"#00d1ff",opacity:.25,width:1},
+                 move:{speed:2}},
+      interactivity:{events:{onhover:{enable:true,mode:"repulse"}}},
+      retina_detect:true
+    });
+  </script>
 </body>
 </html>
