@@ -83,7 +83,7 @@ var simplemaps_countrymap_mapdata={
       color: "red"
     },
     AEDU: {
-      name: "Dubay",
+      name: "Dubai",
       color: "blue"
     },
     AEFU: {
@@ -120,7 +120,7 @@ var simplemaps_countrymap_mapdata={
       parent_id: "AEAZ"
     },
     AEDU: {
-      name: "Dubay",
+      name: "Dubai",
       parent_id: "AEDU"
     },
     AEFU: {

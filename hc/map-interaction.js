@@ -22,14 +22,23 @@
       };
     
       /* Hard-coded sensor selections (MDS) */
+      // const sensorNodes = {
+      //   "abu-dhabi":   ["tank1","tank3","tank6"],
+      //   "dubai":       ["tank1","tank3","tank5"],
+      //   "sharjah":     ["tank1","tank6","tank8"],
+      //   "ras-al-khaimah":["tank1","tank4"],
+      //   "fujairah":    ["tank1","tank4","tank6"],
+      //   "umm-al-quwain":["tank1","tank4"],
+      //   "ajman":       ["tank1","tank5"]
+      // };
       const sensorNodes = {
-        "abu-dhabi":   ["tank1","tank3","tank6"],
-        "dubai":       ["tank1","tank3","tank5"],
-        "sharjah":     ["tank1","tank6","tank8"],
-        "ras-al-khaimah":["tank1","tank4"],
-        "fujairah":    ["tank1","tank4","tank6"],
-        "umm-al-quwain":["tank1","tank4"],
-        "ajman":       ["tank1","tank5"]
+        "abu-dhabi":   ["tank2","tank3"],
+        "dubai":       ["tank4","tank5"],
+        "sharjah":     ["tank5","tank3"],
+        "ras-al-khaimah":["tank5"],
+        "fujairah":    ["tank2","tank3","tank4","tank5","tank6","tank7"],
+        "umm-al-quwain":["tank2","tank4"],
+        "ajman":       ["tank4","tank2"]
       };
     
       /*────────── 1. Map hover / click ──────────*/
