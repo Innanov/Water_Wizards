@@ -5,58 +5,291 @@
   <title>About • Water Wizards</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+
+  
 </head>
 <body>
-  <!-- navbar reused -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Water Wizards</a>
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="Images/logo.jpeg" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
+        Water Wizards
+      </a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="live-demo.html">Live Demo</a></li>
-          <li class="nav-item"><a class="nav-link" href="dashboards.html">Dashboards</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link"          href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link"          href="live-demo.html">Live Demo</a></li>
+          <li class="nav-item"><a class="nav-link"          href="dashboards.html">Dashboards</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h2 class="mb-4">Project Mission</h2>
-    <p class="lead">Water Wizards couples quantum-dot sensors with quantum optimisation algorithms to deliver real-time, cost-efficient monitoring of water quality worldwide.</p>
+  <main class="container py-6" style="background: linear-gradient(to bottom right, #ffff, #ffff);">
+    <!-- Hero Section with vibrant gradient background -->
+    <section class="text-center mb-6 rounded-lg shadow p-5" style="background: linear-gradient(135deg, #05445E, #189AB4); color: white;">
+      <div class="position-relative overflow-hidden">
+        <div class="position-absolute" style="top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%;"></div>
+        <div class="position-absolute" style="bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%;"></div>
+        
+        <h1 class="fw-bold display-4 mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Water Wizards</h1>
+        <h2 class="fw-bold mb-4" style="color: #D4F1F4;">Quantum Solutions for Clean Water</h2>
+        <p class="lead mt-4 px-md-5 mx-md-5">
+          Combining advanced quantum-dot sensors with quantum optimization algorithms to deliver 
+          <span class="fw-semibold" style="color: #75E6DA;">real-time</span>, 
+          <span class="fw-semibold" style="color: #75E6DA;">cost-efficient</span> water quality monitoring worldwide.
+        </p>
+        
+      </div>
+    </section>
+  
+    <!-- Why Quantum Sensors Section with colorful cards -->
+    <section class="mb-6">
+      <div class="d-flex align-items-center mb-4">
+        <h3 class="fw-semibold m-0" style="color: #05445E;">Why Quantum Sensors?</h3>
+        <div class="flex-grow-1 ms-3" style="border-bottom: 3px solid #189AB4;"></div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow border-0 position-relative overflow-hidden card-hover">
+            <div class="position-absolute" style="background-color: #75E6DA; height: 7px; width: 100%; top: 0;"></div>
+            <div class="card-body text-center p-4">
+              <div class="rounded-circle p-3 d-inline-block mb-3" style="background: linear-gradient(135deg, #75E6DA, #189AB4); color: white;">
+                <span class="fs-2">🎯</span>
+              </div>
+              <h5 class="card-title fw-bold" style="color: #05445E;">Unprecedented Sensitivity</h5>
+              <p class="card-text">Detect heavy metals at parts-per-billion levels for unmatched accuracy in water quality assessment.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card h-100 shadow border-0 position-relative overflow-hidden card-hover">
+            <div class="position-absolute" style="background-color: #189AB4; height: 7px; width: 100%; top: 0;"></div>
+            <div class="card-body text-center p-4">
+              <div class="rounded-circle p-3 d-inline-block mb-3" style="background: linear-gradient(135deg, #189AB4, #05445E); color: white;">
+                <span class="fs-2">🔬</span>
+              </div>
+              <h5 class="card-title fw-bold" style="color: #05445E;">High Precision & Low Noise</h5>
+              <p class="card-text">Achieve superior signal clarity over traditional probes, ensuring reliable data in any environment.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card h-100 shadow border-0 position-relative overflow-hidden card-hover">
+            <div class="position-absolute" style="background-color: #05445E; height: 7px; width: 100%; top: 0;"></div>
+            <div class="card-body text-center p-4">
+              <div class="rounded-circle p-3 d-inline-block mb-3" style="background: linear-gradient(135deg, #05445E, #0a617d); color: white;">
+                <span class="fs-2">♻️</span>
+              </div>
+              <h5 class="card-title fw-bold" style="color: #05445E;">Passive & Long-Lasting</h5>
+              <p class="card-text">Non-invasive, durable devices that significantly reduce operational costs (OPEX) and maintenance requirements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Quantum Dot Sensing Principle with wave decorations -->
+    <section class="mb-6 position-relative">
+    
+      <div class="d-flex align-items-center mb-4">
+        <h3 class="fw-semibold m-0" style="color: #05445E;">Quantum Dot Sensing Principle</h3>
+        <div class="flex-grow-1 ms-3" style="border-bottom: 3px solid #189AB4;"></div>
+      </div>
+      
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="p-4 rounded shadow-sm" style="background: white; border-left: 5px solid #75E6DA;">
+            <p class="mb-3">
+              Fluorescent quantum dots (QDs) alter their intensity or wavelength upon binding to specific contaminants like:
+            </p>
+            <div class="d-flex flex-wrap justify-content-around mb-3">
+              <span class="badge p-2 m-1 fs-6" style="background: linear-gradient(135deg, #FF5252, #B71C1C);">Hg²⁺ (Mercury)</span>
+              <span class="badge p-2 m-1 fs-6" style="background: linear-gradient(135deg, #424242, #212121);">Pb²⁺ (Lead)</span>
+              <span class="badge p-2 m-1 fs-6 text-dark" style="background: linear-gradient(135deg, #FFD740, #FFC400);">As³⁺ (Arsenic)</span>
+              <span class="badge p-2 m-1 fs-6" style="background: linear-gradient(135deg, #9E9E9E, #616161);">Cd²⁺ (Cadmium)</span>
+            </div>
+            <p class="mb-0">
+              Water Wizards' proprietary technology accurately measures these fluorescence shifts <em>in situ</em> to quantify water contamination with unprecedented precision.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <div class="p-4 rounded shadow-sm" style="background: linear-gradient(135deg, #05445E10, #189AB410); border-right: 5px solid #05445E;">
+            <h5 class="fw-bold" style="color: #05445E;">Key Benefits</h5>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #189AB4;"></i> Real-time monitoring</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #189AB4;"></i> No chemical reagents needed</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #189AB4;"></i> Reusable sensors</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #189AB4;"></i> Remote operation capability</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color: #189AB4;"></i> Cloud-based analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Global Problem Snapshot with glass-morphism style -->
+    <section class="mb-6">
+      <div class="d-flex align-items-center mb-4">
+        <h3 class="fw-semibold m-0" style="color: #05445E;">Global Water Crisis: By the Numbers</h3>
+        <div class="flex-grow-1 ms-3" style="border-bottom: 3px solid #189AB4;"></div>
+      </div>
+      
+      <div class="card border-0 shadow-lg" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);">
+        <div class="card-header p-3" style="background: linear-gradient(90deg, #05445E, #189AB4); color: white; border: none;">
+          <h5 class="m-0">Regional Impact Assessment</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead style="background-color: rgba(5, 68, 94, 0.05);">
+                <tr>
+                  <th class="px-4" style="color: #05445E;">Region</th>
+                  <th class="px-4" style="color: #05445E;">Key Statistic</th>
+                  <th class="px-4" style="color: #05445E;">Impact</th>
+                  <th class="px-4" style="color: #05445E;">Severity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-4 fw-semibold" style="color: #05445E;">UAE – Abu Dhabi (2018)</td>
+                  <td class="px-4">30% homes high-risk for As/Cd/Pb</td>
+                  <td class="px-4">Legal limits exceeded</td>
+                  <td class="px-4"><span class="badge px-3 py-2" style="background: linear-gradient(90deg, #FFD740, #FFC400); color: #333;">High</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 fw-semibold" style="color: #05445E;">UAE – Ajman (2019)</td>
+                  <td class="px-4">1,000+ apartments; 40–50 families ill</td>
+                  <td class="px-4">Sewage-smell tap water</td>
+                  <td class="px-4"><span class="badge px-3 py-2" style="background: linear-gradient(90deg, #FFD740, #FFC400); color: #333;">High</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 fw-semibold" style="color: #05445E;">Kazakhstan (2022)</td>
+                  <td class="px-4">&lt;30% safe water access</td>
+                  <td class="px-4">57% rely on polluted wells</td>
+                  <td class="px-4"><span class="badge px-3 py-2" style="background: linear-gradient(90deg, #FF5252, #B71C1C); color: white;">Critical</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 fw-semibold" style="color: #05445E;">Bangladesh</td>
+                  <td class="px-4">58M exposed to arsenic</td>
+                  <td class="px-4">Skin lesions & cancer risk</td>
+                  <td class="px-4"><span class="badge px-3 py-2" style="background: linear-gradient(90deg, #FF5252, #B71C1C); color: white;">Critical</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 fw-semibold" style="color: #05445E;">Yemen ('16–'24)</td>
+                  <td class="px-4">2.5M cholera cases</td>
+                  <td class="px-4">4,000+ deaths</td>
+                  <td class="px-4"><span class="badge px-3 py-2" style="background: linear-gradient(90deg, #FF5252, #B71C1C); color: white;">Critical</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 fw-semibold" style="color: #05445E;">Sudan (2025)</td>
+                  <td class="px-4">57,135 cholera cases</td>
+                  <td class="px-4">1,506 deaths</td>
+                  <td class="px-4"><span class="badge px-3 py-2" style="background: linear-gradient(90deg, #FF5252, #B71C1C); color: white;">Critical</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- SDG Alignment with colorful icons -->
+    <section class="text-center mt-6 rounded-lg shadow-sm p-5" style="background: linear-gradient(135deg, #ffffff, #f0f9ff);">
+      <h3 class="fw-semibold mb-4" style="color: #05445E;">Sustainable Development Goals Alignment</h3>
+      <p class="lead mb-5">
+        Water Wizards is committed to advancing multiple UN Sustainable Development Goals:
+      </p>
+      
+      <div class="row justify-content-center g-4">
+        <div class="col-6 col-md-3 card-hover" style="width: 200px;">
+          <img src="1.png" alt="" class="img-fluid">
+          <h5 class="mt-3 fw-bold" style="color: #2E7D32;">Good Health & Well-Being</h5>
+        </div>
+      
+        <div class="col-6 col-md-3 card-hover" style="width: 200px;">
+          <img src="2.png" alt="" class="img-fluid">
+          <h5 class="mt-3 fw-bold" style="color: #0288D1;">Clean Water and Sanitation</h5>
+        </div>
+      
+        <div class="col-6 col-md-3 card-hover" style="width: 200px;">
+          <img src="3.png" alt="" class="img-fluid">
+          <h5 class="mt-3 fw-bold" style="color: #F57C00;">Industry, Innovation & Infrastructure</h5>
+        </div>
+      
+        <div class="col-6 col-md-3 card-hover" style="width: 200px;">
+          <img src="4.png" alt="" class="img-fluid">
+          <h5 class="mt-3 fw-bold" style="color: #C2185B;">Sustainable Cities and Communities</h5>
+        </div>
+      </div>
 
-    <h3 class="mt-5">Why Quantum Sensors ?</h3>
-    <ul>
-      <li>Unprecedented sensitivity — ppb-level heavy-metal detection</li>
-      <li>Higher precision & lower noise floor than classical probes</li>
-      <li>Passive, non-invasive, long-lived devices reduce OPEX</li>
-    </ul>
+      
+    </section>
+  
+    <!-- Call to Action with water-inspired wave background -->
+    <section class="mt-6 p-5 rounded-lg shadow text-center position-relative overflow-hidden" style="color: white;">
+      <!-- Wave background SVG animation -->
+      <div class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #05445E, #189AB4); z-index: -2;"></div>
+      <div class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.2;">
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,181.3C320,181,400,203,480,224C560,245,640,267,720,261.3C800,256,880,224,960,218.7C1040,213,1120,235,1200,229.3C1280,224,1360,192,1400,176L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+          </svg>
+        </div>
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#75E6DA" fill-opacity="0.3" d="M0,96L40,112C80,128,160,160,240,181.3C320,203,400,213,480,208C560,203,640,181,720,186.7C800,192,880,224,960,213.3C1040,203,1120,149,1200,128C1280,107,1360,117,1400,122.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="text-center py-5" style="background: linear-gradient(135deg, #75E6DA, #05445E); border-radius: 20px;">
+        <h3 class="fw-bold mb-3 position-relative" style="font-size: 2.5rem; color: #FFFFFF; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);">
+          Ready to Transform Water Monitoring?
+        </h3>
+        <p class="lead mb-4 position-relative" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto; color: #FFFFFF; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);">
+          Discover how Water Wizards can help your community access safer, cleaner water through quantum technology.
+        </p>
+       
 
-    <h3 class="mt-4">Quantum Dot Sensing Principle</h3>
-    <p>Fluorescent QDs shift intensity or wavelength when binding to specific analytes (Hg²⁺, Pb²⁺, As³⁺, Cd²⁺). Water Wizards reads these shifts to quantify contamination <em>in situ</em>.</p>
-
-    <h3 class="mt-5">Global Problem Snapshot</h3>
-    <div class="table-responsive">
-      <table class="table table-striped">
-        <thead class="table-dark"><tr><th>Region</th><th>Key Stat</th><th>Impact</th></tr></thead>
-        <tbody>
-          <tr><td>UAE – Abu Dhabi (2018)</td><td>30 % homes high-risk for As/Cd/Pb</td><td>Legal limits exceeded</td></tr>
-          <tr><td>UAE – Ajman (2019)</td><td>1 000 + apartments; 40–50 families ill</td><td>Sewage-smell tap water</td></tr>
-          <tr><td>Kazakhstan (2022)</td><td>&lt;30 % safe water access</td><td>57 % rely on polluted wells</td></tr>
-          <tr><td>Bangladesh</td><td>58 M exposed to arsenic</td><td>Skin lesions & cancer risk</td></tr>
-          <tr><td>Yemen (’16-’24)</td><td>2.5 M cholera cases</td><td>4 000 + deaths</td></tr>
-          <tr><td>Sudan (2025)</td><td>57 135 cholera cases</td><td>1 506 deaths</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="mt-5">SDG Alignment</h3>
-    <p>Water Wizards directly addresses SDG 3 (Health), 6 (Clean Water), 9 (Resilient Infrastructure) and 11 (Sustainable Cities).</p>
+        <div class="mt-5">
+          <a href="live-demo.html" class="btn btn-lg" style="background: linear-gradient(90deg, #05445E, #189AB4); color: white; border: none; transition: transform 0.3s;">Request Demo</a>
+        </div>
+      </div>
+    </section>
+  
+    
+    <script>
+      // Script pour animer les cartes quand elles apparaissent dans le viewport
+      document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll('.card-hover');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+    
+        cards.forEach(card => {
+          observer.observe(card);
+        });
+      });
+    </script>
   </main>
 
   <footer class="bg-dark text-light text-center py-3">© 2025 Water Wizards</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
 </body>
 </html>
