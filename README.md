@@ -1,6 +1,8 @@
 
 # Team 4: Water Wizards - سحرة الماء
 
+![Water Wizards Logo](./water_wizards.png)
+
 ## Introduction
 
 Water Wizards helps communities efficiently 
