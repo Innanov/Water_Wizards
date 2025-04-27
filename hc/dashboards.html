@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>Dashboards • Water Wizards</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -21,13 +22,197 @@
       </div>
     </div>
   </nav>
-
-  <main class="container py-5 text-center">
-    <h2 class="mb-4">Dashboards (Coming Soon)</h2>
-    <p class="lead">Interactive analytics on contaminant trends, sensor uptime and SDG-impact metrics will appear here.</p>
+  <main class="container py-5">
+    <h2 class="mb-4 text-center">Metal Concentration Dashboards</h2>
+    <p class="lead text-center mb-5">Interactive analytics on contaminant trends and permissible values.</p>
+    
+    <div class="row mb-5">
+      <div class="col-12">
+        <h3 class="chart-title text-center">Metal Concentration Comparison: Normal vs Bad</h3>
+        <div class="chart-container">
+          <canvas id="metalChart"></canvas>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="row">
+      <div class="col-12">
+        <h3 class="chart-title text-center">Difference Between Bad and Normal Values</h3>
+        <div class="chart-container">
+          <canvas id="differenceChart"></canvas>
+        </div>
+      </div>
+    </div>
   </main>
-
   <footer class="bg-dark text-light text-center py-3">© 2025 Water Wizards</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Data from the notebook
+    const metalData = [
+      { metal: 'Cu', normal: 2, bad: 3 },
+      { metal: 'Zn', normal: 3, bad: 5 },
+      { metal: 'Ni(II)', normal: 0.07, bad: 0.21 },
+      { metal: 'Cd(II)', normal: 0.003, bad: 0.05 },
+      { metal: 'Pb(II)', normal: 0.05, bad: 0.2 },
+      { metal: 'Fe(III)', normal: 3, bad: 5 },
+      { metal: 'As(III)', normal: 0.05, bad: 0.25 },
+      { metal: 'Ag(I)', normal: 0.1, bad: 0.3 },
+      { metal: 'Cr(VI)', normal: 0.05, bad: 0.23 },
+      { metal: 'Hg(II)', normal: 0.001, bad: 0.05 }
+    ];
+    
+    // Calculate the difference for each metal
+    const dataWithDifference = metalData.map(item => ({
+      ...item,
+      difference: item.bad - item.normal
+    }));
+    
+    // Create the comparison chart
+    const ctx = document.getElementById('metalChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: metalData.map(item => item.metal),
+        datasets: [
+          {
+            label: 'Normal Value',
+            data: metalData.map(item => item.normal),
+            backgroundColor: '#6610f2',
+          },
+          {
+            label: 'Bad Value',
+            data: metalData.map(item => item.bad),
+            backgroundColor: '#dc3545',
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            ticks: {
+              maxRotation: 45,
+              minRotation: 45
+            }
+          },
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.dataset.label + ': ' + context.raw.toFixed(3);
+              }
+            }
+          }
+        }
+      }
+    });
+    
+    // Create the difference chart
+    const ctxDiff = document.getElementById('differenceChart').getContext('2d');
+    new Chart(ctxDiff, {
+      type: 'bar',
+      data: {
+        labels: dataWithDifference.map(item => item.metal),
+        datasets: [
+          {
+            label: 'Difference (Bad - Normal)',
+            data: dataWithDifference.map(item => item.difference),
+            backgroundColor: '#fd7e14',
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            ticks: {
+              maxRotation: 45,
+              minRotation: 45
+            }
+          },
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.dataset.label + ': ' + context.raw.toFixed(3);
+              }
+            }
+          }
+        }
+      }
+    });
+    
+    // Create building visualization
+    const buildingChart = document.getElementById('buildingChart');
+    
+    metalData.forEach(item => {
+      // Calculate the heights as percentages based on values
+      // Using a scaling factor to make the visualization meaningful
+      const getScaledHeight = (value) => {
+        if (value >= 1) {
+          return value * 20; // Scale larger values
+        } else {
+          // Use logarithmic scaling for small values
+          return Math.max(10, 50 * value + 20);
+        }
+      };
+      
+      const normalHeight = getScaledHeight(item.normal);
+      const badHeight = getScaledHeight(item.bad);
+      
+      const building = document.createElement('div');
+      building.className = 'building';
+      
+      // Create columns container
+      const columns = document.createElement('div');
+      columns.className = 'd-flex align-items-end';
+      
+      // Create normal column
+      const normalColumn = document.createElement('div');
+      normalColumn.className = 'building-column normal';
+      normalColumn.style.height = `${normalHeight}px`;
+      
+      const normalValue = document.createElement('div');
+      normalValue.className = 'building-value';
+      normalValue.textContent = item.normal.toFixed(3);
+      normalColumn.appendChild(normalValue);
+      
+      // Create bad column
+      const badColumn = document.createElement('div');
+      badColumn.className = 'building-column bad';
+      badColumn.style.height = `${badHeight}px`;
+      
+      const badValue = document.createElement('div');
+      badValue.className = 'building-value';
+      badValue.textContent = item.bad.toFixed(3);
+      badColumn.appendChild(badValue);
+      
+      // Add columns to container
+      columns.appendChild(normalColumn);
+      columns.appendChild(badColumn);
+      
+      // Create label
+      const label = document.createElement('div');
+      label.className = 'building-label';
+      label.textContent = item.metal;
+      
+      // Add all to building
+      building.appendChild(columns);
+      building.appendChild(label);
+      
+      // Add building to chart
+      buildingChart.appendChild(building);
+    });
+  </script>
 </body>
 </html>
