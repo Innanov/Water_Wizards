@@ -11,9 +11,9 @@ leveraging quantum precision to advance SDGs on Good Health, Clean Water, Reduce
 
 
 
+<!-- 
 ## Background
 
-<!-- 
 ## Classical Benchmarking Algorithm
 
 ... 
@@ -71,9 +71,10 @@ The algorithm provides a set of points representing the ideal locations for cora
 
 ## Data Visualization
 
-All the images (results) generated are present in the repository. -->
+All the images (results) generated are present in the repository. 
 
 ## Roadmap
+-->
 
 <!-- - 6 months: Product validation with UAE MOCCAE and the "Dubai Reef" project.
 - 3+ years: Scale to 15+ countries with separate data management systems and bleaching forecasting. -->
